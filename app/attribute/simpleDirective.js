@@ -9,7 +9,8 @@ angular.module('myApp.view1.simple', [])
                     name: '@',
                     person: '@'
                 },
-                template: '<div><p>simple-name directive name: {{name}}</p><button ng-click="setName()">Change Name</button><p>person: {{person}} name:{{person.name}} gender: {{person.gender}}</p></div>',
+                templateUrl: 'attribute/simple.html',
+                //template: '<div><p>simple-name directive name: {{name}}</p><button ng-click="setName()">Change Name</button><p>person: {{person}} name:{{person.name}} gender: {{person.gender}}</p></div>',
                 replace: true,
                 link: function(scope, element) {
 

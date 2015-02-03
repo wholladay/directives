@@ -3,13 +3,13 @@
 angular.module('myApp.view1', ['ngRoute', 'myApp.view1.simple'])
 
         .config(['$routeProvider', function($routeProvider) {
-            $routeProvider.when('/view1', {
-                templateUrl: 'view1/view1.html',
-                controller: 'View1Ctrl'
+            $routeProvider.when('/attribute', {
+                templateUrl: 'attribute/attribute.html',
+                controller: 'attributeController'
             });
         }])
 
-        .controller('View1Ctrl', ['$scope', function($scope) {
+        .controller('attributeController', ['$scope', function($scope) {
 
             function _setName() {
                 $scope.name = 'Tom';
