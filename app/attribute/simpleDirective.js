@@ -1,8 +1,8 @@
-'use strict';
-
+/* globals angular */
 angular.module('myApp.view1.simple', [])
 
-        .directive('simpleName', ['$log', function($log) {
+        .directive('simpleName', function() {
+            'use strict';
             return {
                 restrict: 'AE',
                 scope: {
@@ -10,9 +10,8 @@ angular.module('myApp.view1.simple', [])
                     person: '@'
                 },
                 templateUrl: 'attribute/simple.html',
-                //template: '<div><p>simple-name directive name: {{name}}</p><button ng-click="setName()">Change Name</button><p>person: {{person}} name:{{person.name}} gender: {{person.gender}}</p></div>',
                 replace: true,
-                link: function(scope, element) {
+                link: function(scope) {
 
                     function _setName() {
                         scope.name = 'Harry';
@@ -25,4 +24,4 @@ angular.module('myApp.view1.simple', [])
                     _init();
                 }
             };
-        }]);
+        });

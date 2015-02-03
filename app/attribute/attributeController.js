@@ -1,8 +1,8 @@
-'use strict';
-
+/* globals angular */
 angular.module('myApp.view1', ['ngRoute', 'myApp.view1.simple'])
 
         .config(['$routeProvider', function($routeProvider) {
+            'use strict';
             $routeProvider.when('/attribute', {
                 templateUrl: 'attribute/attribute.html',
                 controller: 'attributeController'
@@ -10,6 +10,7 @@ angular.module('myApp.view1', ['ngRoute', 'myApp.view1.simple'])
         }])
 
         .controller('attributeController', ['$scope', function($scope) {
+            'use strict';
 
             function _setName() {
                 $scope.name = 'Tom';
